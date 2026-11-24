@@ -14,11 +14,11 @@ default = []
 serde = ["ahash/serde", "indexmap/serde"]
 
 [dependencies]
-ahash = { version = "0.8.11" }
-indexmap = { version = "2.9.0" }
+ahash = { version = "0.8.12" }
+indexmap = { version = "2.14.2" }
 
 [target.'cfg(target_family = "wasm")'.dependencies]
-getrandom = { version = "0.3.3", features = ["wasm_js"] }
+getrandom = { version = "0.4.3", features = ["wasm_js"] }
 
 [lints]
 workspace = true

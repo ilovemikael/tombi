@@ -47,3 +47,4 @@ out/
 # kiro
 .kiro/
 .audit
+Cargo.lock

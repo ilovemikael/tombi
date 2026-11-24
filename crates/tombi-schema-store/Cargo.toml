@@ -17,7 +17,6 @@ reqwest = [
   "dep:hyper-util",
   "dep:reqwest",
   "dep:system-configuration",
-  "dep:windows-registry",
 ]
 reqwest01 = ["reqwest"]
 wasm = ["gloo-net", "tombi-future/wasm"]
@@ -69,9 +68,6 @@ tokio = { workspace = true, features = ["process", "time"] }
 
 [target.'cfg(target_os = "macos")'.dependencies]
 system-configuration = { workspace = true, optional = true }
-
-[target."cfg(windows)".dependencies]
-windows-registry = { workspace = true, optional = true }
 
 [lints]
 workspace = true

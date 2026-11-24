@@ -30,63 +30,63 @@ license = "MIT"
 
 [workspace.dependencies]
 addr = "0.15.6"
-anyhow = "1.0.103"
-bytes = "1.11.1"
-clap = { version = "4.5.37", features = ["derive", "env", "string"] }
+anyhow = "1.0.105"
+bytes = "1.12.2"
+chrono = { version = "0.4.45", features = ["serde"] }
+clap = { version = "4.6.9", features = ["derive", "env", "string"] }
 console_error_panic_hook = "0.1.7"
-convert_case = "0.6.0"
-dirs = { version = "6.0.0" }
+convert_case = "0.12.0"
+dirs = { version = "7.0.0" }
 drop_bomb = "0.1.5"
-email_address = "0.2.9"
-env_logger = "0.11.5"
-fast-glob = "0.3.0"
-flate2 = "1.0.35"
-futures = "0.3.31"
-glob = "0.3.2"
-gloo-net = { version = "0.6.0", default-features = false, features = ["http"] }
+email_address = "0.2.10"
+env_logger = "0.11.12"
+fast-glob = "1.1.2"
+flate2 = "1.1.11"
+futures = "0.3.34"
+glob = "0.3.4"
+gloo-net = { version = "0.8.0", default-features = false, features = ["http"] }
 http = "1.5.0"
-hyper-util = { version = "0.1.20", default-features = false, features = ["client-proxy"] }
-ignore = "0.4.33"
-itertools = "0.14.0"
-jiff = { version = "0.2", features = ["js", "serde"] }
-js-sys = "0.3.77"
-log = "0.4.22"
-memchr = "2.7.5"
-napi = { version = "3.13.0", default-features = false, features = ["napi4", "serde-json"] }
-napi-build = "2.5.0"
-napi-derive = "3.6.9"
-nu-ansi-term = "0.50.1"
-parking_lot = "0.12.5"
+hyper-util = { version = "0.1.21", default-features = false, features = ["client-proxy"] }
+ignore = "0.4.35"
+itertools = "0.15.0"
+js-sys = "0.3.107"
+log = "0.4.35"
+memchr = "2.8.3"
+napi = { version = "3.16.3", default-features = false, features = ["napi4", "serde-json"] }
+napi-build = "2.7.0"
+napi-derive = "3.7.2"
+nu-ansi-term = "0.50.3"
+parking_lot = "0.13.0"
 pep508_rs = "0.9"
-percent-encoding = "2.3.1"
+percent-encoding = "2.3.2"
 pretty_assertions = "1.4.1"
-proc-macro-crate = "3.4.0"
-proc-macro2 = "1.0.95"
-pyo3 = { version = "0.29.2", features = ["abi3-py312"] }
-pyo3-async-runtimes = { version = "0.29.0", features = ["tokio-runtime"] }
-pythonize = "0.29.0"
-quote = "1.0.40"
-rayon = "1.10.0"
-reqwest = { version = "0.12.15", default-features = false, features = ["gzip", "json", "rustls-tls-native-roots"] }
-rstest = { version = "0.25.0" }
-schemars = { version = "1.2.1", features = ["preserve_order", "url2"] }
+proc-macro-crate = "3.5.0"
+proc-macro2 = "1.0.107"
+pyo3 = { version = "0.30.1", features = ["abi3-py312"] }
+pyo3-async-runtimes = { version = "0.30", features = ["tokio-runtime"] }
+pythonize = "0.30.0"
+quote = "1.0.47"
+rayon = "1.12.0"
+reqwest = { version = "0.13.5", default-features = false, features = ["gzip", "json", "rustls"] }
+rstest = { version = "0.29.0" }
+schemars = { version = "1.2.3", features = ["preserve_order", "url2"] }
 self_cell = "1.3"
-semver = "1.0.17"
+semver = "1.0.28"
 send_wrapper = { version = "0.6.0", features = ["futures"] }
-serde = { version = "1.0.219", features = ["derive", "rc"] }
-serde_json = { version = "1.0.140", features = ["preserve_order"] }
+serde = { version = "1.0.229", features = ["derive", "rc"] }
+serde_json = { version = "1.0.154", features = ["preserve_order"] }
 serde_tombi = { path = "rust/serde_tombi", default-features = false }
 serde_tombi_macros = { path = "rust/serde_tombi_macros" }
-sha2 = "0.11.0"
-similar = { version = "2.7.0" }
-syn = { version = "2.0.110", features = ["extra-traits", "full"] }
-system-configuration = "0.7.0"
+sha2 = "0.11.1"
+similar = { version = "3.2.1" }
+syn = { version = "3.0.10", features = ["extra-traits", "full"] }
+system-configuration = "0.8.0"
 tar = { version = "0.4.46" }
-tempfile = { version = "3.15.0" }
-textwrap = { version = "0.16.2" }
-thiserror = { version = "2.0.12" }
-time = { version = "0.3.47" }
-tokio = { version = "1.45.0", default-features = false }
+tempfile = { version = "3.27.0" }
+textwrap = { version = "0.16.4" }
+thiserror = { version = "2.0.21" }
+time = { version = "0.3.55" }
+tokio = { version = "1.54.1", default-features = false }
 tombi-accessor = { path = "crates/tombi-accessor" }
 tombi-ast = { path = "crates/tombi-ast" }
 tombi-ast-syntax = { path = "crates/tombi-ast-syntax" }
@@ -134,22 +134,20 @@ tombi-uri = { path = "crates/tombi-uri" }
 tombi-validator = { path = "crates/tombi-validator" }
 tombi-version-sort = { path = "crates/tombi-version-sort" }
 tombi-x-keyword = { path = "crates/tombi-x-keyword" }
-tower = { version = "0.5.2", default-features = false, features = ["util"] }
+tower = { version = "0.5.3", default-features = false, features = ["util"] }
 tower-lsp-server = { version = "=0.24.0-rc.1", default-features = false, features = ["url-url"] }
-typed-builder = "0.21.0"
-ungrammar.version = "1.16.1"
-unicode-ident = "1.0.24"
-unicode-segmentation = "1.12.0"
-uuid = { version = "1.18.0", default-features = false }
-wasi = { version = "0.14.7" }
-wasm-bindgen = "0.2.100"
-wasm-bindgen-futures = "0.4.50"
-wasm-streams = "0.4.2"
-web-sys = "0.3.77"
-windows-registry = "0.6.1"
-xshell.version = "0.2.7"
+typed-builder = "0.23.2"
+ungrammar = "1.16.1"
+unicode-ident = "1.0.27"
+unicode-segmentation = "1.13.3"
+uuid = { version = "1.29.3", default-features = false }
+wasm-bindgen = "0.2.130"
+wasm-bindgen-futures = "0.4.80"
+wasm-streams = "0.7.1"
+web-sys = "0.3.107"
+xshell = "0.2.7"
 zed_extension_api = "0.7.0"
-zip = { version = "9.0.5", default-features = false }
+zip = { version = "9.8.2", default-features = false }
 
 [workspace.lints.clippy]
 collapsible_match = "warn"
